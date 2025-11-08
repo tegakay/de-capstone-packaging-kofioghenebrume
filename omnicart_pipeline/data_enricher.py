@@ -1,6 +1,10 @@
 from typing import Dict
 import pandas as pd
 import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")
 
 
 class DataEnricher:
@@ -12,6 +16,7 @@ class DataEnricher:
         products_df = pd.DataFrame(self.products)
         users_df = pd.DataFrame(self.users)
         
+        # logger.info(f"Merging product and user data...{products_df.shape}, {users_df.shape}")
         enriched_df = pd.merge(products_df, users_df, on='id', how='inner', suffixes=('_product', '_user'))
 
         #extract rating into 2 columns for revenue

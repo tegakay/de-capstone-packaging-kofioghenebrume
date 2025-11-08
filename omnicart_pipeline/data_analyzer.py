@@ -1,6 +1,10 @@
 from typing import Dict
 import pandas as pd
 import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")
 
 class DataAnalyzer:
     def __init__(self, data:pd.DataFrame):

@@ -7,8 +7,10 @@ import json
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(message)s")
 
-output_path = os.path.join(os.path.dirname(__file__), "..", "seller_performance_report.json")
-output_path = os.path.abspath(output_path)
+# output_path = os.path.join(os.path.dirname(__file__), "..", "seller_performance_report.json")
+# output_path = os.path.abspath(output_path)
+
+output_path = os.path.join(os.getcwd(), "seller_performance_report.json")
 
 
 from omnicart_pipeline.api_client import APIClient
@@ -40,7 +42,7 @@ class OMNICartETL:
         api_client = APIClient(base_url)
         logger.info("Fetching products...")
 
-        products = api_client.get_all_products(start=0, limit=limit)
+        products = api_client.get_all_products(start=1, limit=limit)
 
         logger.info("Fetching users...")
         users = api_client.get_all_users()
