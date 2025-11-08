@@ -27,10 +27,7 @@ pip install -r requirements.txt
 from omnicart import Pipeline
 
 # Initialize pipeline
-pipeline = Pipeline()
-
-# Run pipeline
-pipeline.run()
+from the command prompt, run `omnicart-pipeline`
 ```
 
 ## Configuration

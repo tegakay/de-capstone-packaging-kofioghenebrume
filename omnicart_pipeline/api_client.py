@@ -29,8 +29,9 @@ class APIClient:
             logging.error(f"An unexpected error occurred: {req_err}")
         
         return None
-    def get_all_products(self,start=0,limit=10):
+    def get_all_products(self,start=1,limit=10):
        response = self._make_request("/products")
+
        product_count = (start - 1) * limit
        if response is not None:
            return response[product_count:product_count+limit]

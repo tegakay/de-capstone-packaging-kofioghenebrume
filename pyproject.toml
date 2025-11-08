@@ -1,6 +1,6 @@
 [project]
-name = "omnicart-pipeline"
-version = "0.1.0"
+name = "omnicart-pipeline-tegakay"
+version = "0.1.4"
 description = ""
 authors = [
     {name = "tegakay",email = "kofitega@gmail.com"}
@@ -9,7 +9,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "requests (>=2.32.5,<3.0.0)",
-    "pandas (>=2.3.3,<3.0.0)"
+    "pandas (>=2.3.0,<3.0.0)"
 ]
 
 [tool.poetry]
